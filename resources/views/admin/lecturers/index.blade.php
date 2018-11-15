@@ -80,11 +80,11 @@
             <div class="modal-content">
                 <div class="form">
                     <form>
-                        <h2>Thêm mới sinh viên</h2>
+                        <h2>Thêm mới giảng viên</h2>
                         <div class="form-group col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control" name="student_code" placeholder="Mã sinh viên">
+                                <input type="text" class="form-control" name="student_code" placeholder="Mã giảng viên">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -133,7 +133,7 @@
             <div class="modal-content">
                 <div class="form">
                     <form>
-                        <h2>Chọn danh sách sinh viên</h2>
+                        <h2>Chọn danh sách giảng viên</h2>
                         <div class="form-group col-md-12">
                             <div class="input-group">
                                 <input type="file" class="button-a-background">
