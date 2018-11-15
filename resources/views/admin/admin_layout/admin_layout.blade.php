@@ -10,7 +10,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>AdminLTE 2 | Starter</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="http://localhost/Laravel/public/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://localhost/Laravel/public/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -21,6 +22,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="http://localhost/Laravel/public/AdminLTE/dist/css/skins/skin-blue.min.css">
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -176,9 +179,9 @@ desired effect
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
-<script src="http://localhost/Laravel/public/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="http://localhost/Laravel/public/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="http://localhost/Laravel/public/AdminLTE/dist/js/adminlte.min.js"></script>
 
