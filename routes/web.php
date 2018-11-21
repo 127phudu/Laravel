@@ -26,3 +26,7 @@ Route::get('admin/students', function () {
 Route::get('admin/lecturers', function () {
     return view('admin.lecturers.index');
 });
+
+Route::get('admin/admins', function () {
+    return view('admin.admins.index');
+});

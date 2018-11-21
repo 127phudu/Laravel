@@ -7,18 +7,18 @@
 @section('content')
 
     <div style="width: 30%; float: left">
-        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertSingleStudent">Thêm sinh viên</button>
+        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertSingleAdmin">Thêm admin</button>
     </div>
 
     <div style="width: 30%; float: left">
-        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertListStudent">Thêm danh sách sinh viên</button>
+        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertListAdmin">Thêm danh sách admin</button>
     </div>
 
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Mã sinh viên/Tên đăng nhập</th>
+                <th>Tên đăng nhập</th>
                 <th>Mật khẩu</th>
                 <th>Họ và tên</th>
                 <th>VNU Email</th>
@@ -33,7 +33,7 @@
                 <td>Triệu Hoàng An</td>
                 <td>15020881@vnu.edu.vn</td>
                 <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleStudent">Sửa</button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleAdmin">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -44,7 +44,7 @@
                 <td>Bùi Châu Anh</td>
                 <td>15021394@vnu.edu.vn</td>
                 <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleStudent">Sửa</button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleAdmin">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -55,7 +55,7 @@
                 <td>Lưu Việt Anh</td>
                 <td>15021606@vnu.edu.vn</td>
                 <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleStudent">Sửa</button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleAdmin">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -66,25 +66,25 @@
                 <td>Triệu Hoàng An</td>
                 <td>15020881@vnu.edu.vn</td>
                 <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleStudent">Sửa</button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleAdmin">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <div class="modal fade" id="insertSingleStudent" role="dialog">
+    <div class="modal fade" id="insertSingleAdmin" role="dialog">
         <link rel="stylesheet" href="{{ asset('css/adminView/form.css') }}">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="form">
-                    <form action="#" method="post">
-                        <h2>Thêm mới sinh viên</h2>
+                    <form action="" method="post">
+                        <h2>Thêm mới admin</h2>
                         <div class="form-group col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control" name="student_code" placeholder="Mã sinh viên">
+                                <input type="text" class="form-control" name="Admin_code" placeholder="Mã admin">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -97,12 +97,6 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                 <input type="email" class="form-control" name="email" placeholder="Nhập VNU email">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
-                                <input type="text" class="form-control" name="class" placeholder="Khóa đào tạo">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -126,18 +120,18 @@
         </div>
     </div>
 
-    <div class="modal fade" id="editSingleStudent" role="dialog">
+    <div class="modal fade" id="editSingleAdmin" role="dialog">
         <link rel="stylesheet" href="{{ asset('css/adminView/form.css') }}">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="form">
-                    <form action="#" method="post">
-                        <h2>Sửa thông tin sinh viên</h2>
+                    <form action="" method="post">
+                        <h2>Sửa thông tin admin</h2>
                         <div class="form-group col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control" name="student_code" placeholder="Mã sinh viên">
+                                <input type="text" class="form-control" name="Admin_code" placeholder="Mã admin">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -150,12 +144,6 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                 <input type="email" class="form-control" name="email" placeholder="Nhập VNU email">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
-                                <input type="text" class="form-control" name="class" placeholder="Khóa đào tạo">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -179,15 +167,14 @@
         </div>
     </div>
 
-
-    <div class="modal fade insertList" id="insertListStudent" role="dialog">
+    <div class="modal fade insertList" id="insertListAdmin" role="dialog">
         <link rel="stylesheet" href="http://localhost/Laravel/public/css/admin_view/form.css">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="form ">
-                    <form action="#" method="post">
-                        <h2>Chọn danh sách sinh viên</h2>
+                <div class="form">
+                    <form action="" method="post">
+                        <h2>Chọn danh sách admin</h2>
                         <div class="form-group col-md-12">
                             <div class="input-group">
                                 <input type="file" class="button-a-background">

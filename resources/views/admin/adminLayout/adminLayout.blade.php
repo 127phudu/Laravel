@@ -19,11 +19,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.6/collection/icon/icon.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="http://localhost/Laravel/public/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/AdminLTE.min.css') }}">
+
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
-    <link rel="stylesheet" href="http://localhost/Laravel/public/AdminLTE/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/skins/skin-blue.min.css') }}">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -62,10 +63,10 @@ desired effect
 <div class="wrapper">
 
     <!-- Main Header -->
-    @include('admin.admin_layout.partial.main_header')
+    @include('admin.adminLayout.partial.mainHeader')
 
     <!-- Left side column. contains the logo and sidebar -->
-    @include('admin.admin_layout.partial.sidebar')
+    @include('admin.adminLayout.partial.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -91,7 +92,7 @@ desired effect
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
-    @include('admin.admin_layout.partial.footer')
+    @include('admin.adminLayout.partial.footer')
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
@@ -185,7 +186,7 @@ desired effect
 <!-- Bootstrap 3.3.7 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="http://localhost/Laravel/public/AdminLTE/dist/js/adminlte.min.js"></script>
+<script src="{{ asset('AdminLTE/dist/js/adminlte.min.js') }}"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

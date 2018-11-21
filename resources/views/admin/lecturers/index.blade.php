@@ -1,4 +1,4 @@
-@extends('admin.admin_layout.admin_layout')
+@extends('admin.adminLayout.adminLayout')
 
 @section('content_header')
     <h1>Danh sách sinh viên</h1>
@@ -7,11 +7,11 @@
 @section('content')
 
     <div style="width: 30%; float: left">
-        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertSingleStudent">Thêm giảng viên</button>
+        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertSingleLecturer">Thêm giảng viên</button>
     </div>
 
     <div style="width: 30%; float: left">
-        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertListStudent">Thêm danh sách giảng viên</button>
+        <button type="button" class="btn btn-vimeo" data-toggle="modal" data-target="#insertListLecturer">Thêm danh sách giảng viên</button>
     </div>
 
     <table class="table table-striped">
@@ -33,7 +33,7 @@
                 <td>Triệu Hoàng An</td>
                 <td>15020881@vnu.edu.vn</td>
                 <td>
-                    <a class="btn btn-default" href="http://localhost/Laravel/public/admin/students/edit">Sửa</a>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleLecturer">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -44,7 +44,7 @@
                 <td>Bùi Châu Anh</td>
                 <td>15021394@vnu.edu.vn</td>
                 <td>
-                    <a class="btn btn-default" href="http://localhost/Laravel/public/admin/students/edit">Sửa</a>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleLecturer">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -55,7 +55,7 @@
                 <td>Lưu Việt Anh</td>
                 <td>15021606@vnu.edu.vn</td>
                 <td>
-                    <a class="btn btn-default" href="http://localhost/Laravel/public/admin/students/edit">Sửa</a>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleLecturer">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
@@ -66,25 +66,25 @@
                 <td>Triệu Hoàng An</td>
                 <td>15020881@vnu.edu.vn</td>
                 <td>
-                    <a class="btn btn-default" href="http://localhost/Laravel/public/admin/students/edit">Sửa</a>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editSingleLecturer">Sửa</button>
                     <a class="btn btn-default remove" href="#">Xóa</a>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <div class="modal fade" id="insertSingleStudent" role="dialog">
-        {{--<link rel="stylesheet" href="http://localhost/Laravel/public/css/admin_view/form.css">--}}
+    <div class="modal fade" id="insertSingleLecturer" role="dialog">
+        <link rel="stylesheet" href="{{ asset('css/adminView/form.css') }}">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="form">
-                    <form>
+                    <form action="" method="post">
                         <h2>Thêm mới giảng viên</h2>
                         <div class="form-group col-md-6">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control" name="student_code" placeholder="Mã giảng viên">
+                                <input type="text" class="form-control" name="Lecturer_code" placeholder="Mã giảng viên">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -97,12 +97,6 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                 <input type="email" class="form-control" name="email" placeholder="Nhập VNU email">
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
-                                <input type="text" class="form-control" name="class" placeholder="Khóa đào tạo">
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -126,13 +120,60 @@
         </div>
     </div>
 
-    <div class="modal fade" id="insertListStudent" role="dialog">
+    <div class="modal fade" id="editSingleLecturer" role="dialog">
+        <link rel="stylesheet" href="{{ asset('css/adminView/form.css') }}">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="form">
+                    <form action="" method="post">
+                        <h2>Sửa thông tin giảng viên</h2>
+                        <div class="form-group col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" name="Lecturer_code" placeholder="Mã giảng viên">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" name="name" placeholder="Họ và tên">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="email" class="form-control" name="email" placeholder="Nhập VNU email">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                        <button type="button" class="btn btn-default" id="closeBtn" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade insertList" id="insertListLecturer" role="dialog">
         <link rel="stylesheet" href="http://localhost/Laravel/public/css/admin_view/form.css">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="form">
-                    <form>
+                    <form action="" method="post">
                         <h2>Chọn danh sách giảng viên</h2>
                         <div class="form-group col-md-12">
                             <div class="input-group">
